@@ -1,6 +1,14 @@
-# file-viewer-demo
+# Vue 3 文档在线预览 Demo
 
-This template should help get you started developing with Vue 3 in Vite.
+基于 [xushanpei/open-file-viewer](https://github.com/xushanpei/open-file-viewer) 实现的 Office、PDF 等文件在线预览示例。
+
+主要内容：
+
+- `DocumentViewer` 通用组件封装
+- PDF.js Worker 与格式插件集中配置
+- DOCX、XLSX、PPTX、PDF 内置示例
+- 本地单文件/多文件上传与预览队列
+- 加载成功、失败、不支持格式事件
 
 ## Recommended IDE Setup
 
@@ -22,19 +30,19 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 ## Project Setup
 
 ```sh
-npm install
+pnpm install
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
+pnpm dev
 ```
 
 ### Compile and Minify for Production
 
 ```sh
-npm run build
+pnpm build
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
