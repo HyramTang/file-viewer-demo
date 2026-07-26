@@ -167,7 +167,12 @@ function handleUnsupported() {
               </span>
               <span class="factory-card__arrow">›</span>
             </button>
-            <a :href="example.sourceUrl" target="_blank" rel="noreferrer">来源：{{ example.source }} ↗</a>
+            <div class="factory-card__links">
+              <RouterLink :to="{ name: 'pure-file-viewer', query: { url: example.url } }">
+                纯净预览 ↗
+              </RouterLink>
+              <a :href="example.sourceUrl" target="_blank" rel="noreferrer">来源：{{ example.source }} ↗</a>
+            </div>
           </article>
         </div>
       </aside>
@@ -442,12 +447,27 @@ function handleUnsupported() {
   font-size: 20px;
 }
 
-.factory-card > a {
-  display: block;
+.factory-card__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   padding: 8px 13px;
   border-top: 1px solid #eef2f6;
-  color: #718096;
   font-size: 9px;
+}
+
+.factory-card__links a {
+  overflow: hidden;
+  color: #718096;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.factory-card__links a:first-child {
+  flex: 0 0 auto;
+  color: #2563eb;
+  font-weight: 750;
 }
 
 .viewer-panel {

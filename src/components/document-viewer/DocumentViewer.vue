@@ -40,6 +40,10 @@ const props = defineProps({
     type: [Boolean, Object],
     default: true,
   },
+  plain: {
+    type: Boolean,
+    default: false,
+  },
   plugins: {
     type: Array,
     default: () => defaultViewerPlugins,
@@ -58,7 +62,7 @@ const resolvedFileName = computed(() => {
 </script>
 
 <template>
-  <div class="document-viewer">
+  <div class="document-viewer" :class="{ 'document-viewer--plain': plain }">
     <OpenFileViewer
       v-if="hasSource"
       :file="file"
@@ -99,6 +103,12 @@ const resolvedFileName = computed(() => {
 
 .document-viewer__canvas {
   min-width: 0;
+}
+
+.document-viewer--plain {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .document-viewer__empty {

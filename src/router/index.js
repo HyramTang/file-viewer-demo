@@ -14,5 +14,10 @@ export default createRouter({
       name: 'file-preview',
       component: () => import('../views/FilePreviewView.vue'),
     },
+    {
+      path: '/viewer',
+      name: 'pure-file-viewer',
+      component: () => import('../views/PureFileView.vue'),
+    },
   ],
 })
