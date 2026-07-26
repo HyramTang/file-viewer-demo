@@ -9,5 +9,10 @@ export default createRouter({
       name: 'document-preview',
       component: HomeView,
     },
+    {
+      path: '/preview',
+      name: 'file-preview',
+      component: () => import('../views/FilePreviewView.vue'),
+    },
   ],
 })

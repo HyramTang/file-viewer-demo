@@ -85,11 +85,9 @@ function formatFileSize(size) {
 
       <a
         class="github-link"
-        href="https://github.com/xushanpei/open-file-viewer"
-        target="_blank"
-        rel="noreferrer"
+        href="/preview"
       >
-        查看开源项目 ↗
+        打开 URL 预览页 →
       </a>
     </header>
 

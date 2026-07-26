@@ -8,6 +8,8 @@
 - PDF.js Worker 与格式插件集中配置
 - DOCX、XLSX、PPTX、PDF 内置示例
 - 本地单文件/多文件上传与预览队列
+- `/preview?url=文件地址` 独立 URL 预览路由
+- 工厂巡检、生产排程、机器防护和制造设施检查默认示例
 - 加载成功、失败、不支持格式事件
 
 ## Recommended IDE Setup
